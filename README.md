@@ -104,8 +104,6 @@ server.listen(3000, () => {
  declarations: [ UserListComponent ]​
 ```
 ​
-
-​
 ```
 4- ng serve
 ```
