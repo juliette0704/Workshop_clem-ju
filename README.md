@@ -95,7 +95,7 @@ server.listen(3000, () => {
 
 1- Ouvrez le fichier ***src/app/app.component.html*** et remplacez le contenu par le code suivant :​
 
-      ```<div> <app-user-list></app-user-list> </div>​```
+```<div> <app-user-list></app-user-list> </div>​```
 
 ​
 
