@@ -67,3 +67,45 @@ export class UserListComponent implements OnInit {
   }
 }
 ```
+
+3- Ouvrez le fichier ***src/app/app.module.ts*** et ajoutez les importations nécessaires au début du fichier : ```import { HttpClientModule } from '@angular/common/http';​```
+
+4- Ajoutez également HttpClientModule à la liste des imports du module :```imports: [ HttpClientModule ]```
+
+**Étape 3: Configuration du service JSON Server​**
+
+1- À la racine de votre projet, créez un fichier ***server.js*** et ajoutez le code suivant : ​
+```
+const jsonServer = require('json-server');
+const server = jsonServer.create();
+const router = jsonServer.router('database.json');
+const middlewares = jsonServer.defaults();
+
+server.use(middlewares);
+server.use(router);
+server.listen(3000, () => {
+  console.log('JSON Server is running');
+});
+
+```
+
+2- Dans votre terminal, exécutez la commande suivante pour démarrer le serveur JSON : ```node server.js​```
+
+**Étape 4: Affichage des données dans l'application Angular​**
+
+1- Ouvrez le fichier ***src/app/app.component.html*** et remplacez le contenu par le code suivant :​
+
+      ```<div> <app-user-list></app-user-list> </div>​```
+
+​
+
+2- Dans la section des déclarations du module, ajoutez le composant ***UserListComponent*** : ​
+```
+ declarations: [ UserListComponent ]​
+```
+​
+
+​
+```
+4- ng serve
+```
