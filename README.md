@@ -39,36 +39,20 @@ Objéctif: découvrir Angular et les appels aux bases de données.​
 
 **Étape 2: Création des composants Angular​**
 
-1- Créez un composant user-list en exécutant la commande suivante : ```ng generate component user-list```
+1- Créez un composant Angular : https://angular.fr/composants/ecrire-un-composant.html
 
-2- Ouvrez le fichier ***src/app/user-list/user-list.component.ts*** et remplacez le contenu par le code suivant:​
+2- Ouvrez le fichier ***src/app/user-list/user-list.component.html***
 
-```
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+  2a - Ajouter un titre : https://developer.mozilla.org/fr/docs/Web/HTML/Element/Heading_Elements
 
-@Component({
-  selector: 'app-user-list',
-  template: `
-    <h2>User List</h2>
-    <ul>
-      <li *ngFor="let user of users">{{ user.name }}</li>
-    </ul>
-  `
-})
-export class UserListComponent implements OnInit {
-  users!: any[];
+3- Ouvrez le fichier ***src/app/user-list/user-list.component.ts***
 
-  constructor(private http: HttpClient) {}
+  3a - Créez une variable ***users***
+  3b - Ajouer un ngOnInit : https://angular.fr/composants/untitled.html
+  3c - Dans le ngOnInit, ajouter une méthode get qui récupère les users : https://jasonwatmore.com/fr/post/2019/09/06/angular-les-exemples-des-requetes-http-get#:~:text=Une%20requ%C3%AAte%20HTTP%20GET%20avec%20gestion%20des%20erreurs,par%20l'appel%20%C3%A0%20http.
 
-  ngOnInit() {
-    this.http.get<any[]>('http://localhost:3000/users')
-      .subscribe(users => this.users = users);
-  }
-}
-```
 
-3- Ouvrez le fichier ***src/app/app.module.ts*** et ajoutez les importations nécessaires au début du fichier : ```import { HttpClientModule } from '@angular/common/http';​```
+3- Ouvrez le fichier ***src/app/app.module.ts*** et verifiez qu'il y a bien cette importations nécessaires au début du fichier : ```import { HttpClientModule } from '@angular/common/http';​```
 
 4- Ajoutez également HttpClientModule à la liste des imports du module :```imports: [ HttpClientModule ]```
 
@@ -88,22 +72,32 @@ server.listen(3000, () => {
 });
 
 ```
-
-2- Dans votre terminal, exécutez la commande suivante pour démarrer le serveur JSON : ```node server.js​```
+2- Démarrez le serveur JSON
 
 **Étape 4: Affichage des données dans l'application Angular​**
 
-1- Ouvrez le fichier ***src/app/app.component.html*** et remplacez le contenu par le code suivant :​
+1 - Affichez les donnée du composant dans l'application web Angular
+  1a - Ouvrez le fichier ***src/app/app.component.html*** et renseignez vous sur internet
 
-```<div> <app-user-list></app-user-list> </div>​```
+2- Verifiez que ans la section des déclarations du module il y est bien ***UserListComponent***
 
-​
+3- Lancez votre projet
 
-2- Dans la section des déclarations du module, ajoutez le composant ***UserListComponent*** : ​
-```
- declarations: [ UserListComponent ]​
-```
-​
-```
-4- ng serve
-```
+***Etape 5: Créer une application de gestion des tâches (to-do list) en utilisant Angular et une API RESTful.***
+
+1- Dans le service ***task.service.ts***, importez HttpClient et implémentez les méthodes nécessaires pour effectuer les requêtes HTTP suivantes :
+
+- Récupérer toutes les tâches (GET)
+- Ajouter une nouvelle tâche (POST)
+- Mettre à jour une tâche existante (PUT)
+- Supprimer une tâche (DELETE)
+
+2- Dans le composant principal de l'application ***(app.component.ts)***, injectez le service TaskService et utilisez-le pour afficher la liste des tâches et implémentez les fonctionnalités d'ajout, de mise à jour et de suppression de tâches.
+
+3- Dans le fichier HTML du composant principal ***(app.component.html)***, affichez les tâches récupérées depuis l'API et ajoutez des fonctionnalités pour créer, mettre à jour et supprimer des tâches.
+
+4- Déployez une API RESTful (vous pouvez utiliser une fausse API comme JSONPlaceholder ou créer votre propre API en utilisant des outils tels que Express ou Django) pour gérer les requêtes HTTP de votre application.
+
+5- Testez votre application en ajoutant, mettant à jour et supprimant des tâches, en vous assurant que les modifications sont reflétées à la fois dans l'application et dans l'API.
+
+- VOILA FINI
