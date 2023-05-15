@@ -47,9 +47,9 @@ Objéctif: découvrir Angular et les appels aux bases de données.​
 
 3- Ouvrez le fichier ***src/app/user-list/user-list.component.ts***
 
-  3a - Créez une variable ***users***
-  3b - Ajouer un ngOnInit : https://angular.fr/composants/untitled.html
-  3c - Dans le ngOnInit, ajouter une méthode get qui récupère les users : https://jasonwatmore.com/fr/post/2019/09/06/angular-les-exemples-des-requetes-http-get#:~:text=Une%20requ%C3%AAte%20HTTP%20GET%20avec%20gestion%20des%20erreurs,par%20l'appel%20%C3%A0%20http.
+  - 3a - Créez une variable ***users***
+  - 3b - Ajouer un ngOnInit : https://angular.fr/composants/untitled.html
+  - 3c - Dans le ngOnInit, ajouter une méthode get qui récupère les users : https://jasonwatmore.com/fr/post/2019/09/06/angular-les-exemples-des-requetes-http-get#:~:text=Une%20requ%C3%AAte%20HTTP%20GET%20avec%20gestion%20des%20erreurs,par%20l'appel%20%C3%A0%20http.
 
 
 3- Ouvrez le fichier ***src/app/app.module.ts*** et verifiez qu'il y a bien cette importations nécessaires au début du fichier : ```import { HttpClientModule } from '@angular/common/http';​```
@@ -77,7 +77,7 @@ server.listen(3000, () => {
 **Étape 4: Affichage des données dans l'application Angular​**
 
 1 - Affichez les donnée du composant dans l'application web Angular
-  1a - Ouvrez le fichier ***src/app/app.component.html*** et renseignez vous sur internet
+  - 1a - Ouvrez le fichier ***src/app/app.component.html*** et renseignez vous sur internet
 
 2- Verifiez que ans la section des déclarations du module il y est bien ***UserListComponent***
 
@@ -96,7 +96,14 @@ server.listen(3000, () => {
 
 3- Dans le fichier HTML du composant principal ***(app.component.html)***, affichez les tâches récupérées depuis l'API et ajoutez des fonctionnalités pour créer, mettre à jour et supprimer des tâches.
 
-4- Déployez une API RESTful (vous pouvez utiliser une fausse API comme JSONPlaceholder ou créer votre propre API en utilisant des outils tels que Express ou Django) pour gérer les requêtes HTTP de votre application.
+4- Déployez une API RESTful vous pouvez utiliser une fausse API comme JSONPlaceholder ou créer votre propre API en utilisant des outils tels que Express pour gérer les requêtes HTTP de votre application :
+
+  - 4a - Créez un nouveau répertoire pour votre API et allez-y dans votre terminal.
+  - 4b - Installez les dépendances nécessaires pour votre API, (prenez Express) : ```npm install express body-parser```
+  - 4c - Créez un fichier index.js dans votre répertoire pour l'API.
+  - 4d - Dans le fichier index.js, importez les modules nécessaires et configurez Express pour écouter sur un port spécifique.
+  - 4e - Ajoutez les routes nécessaires pour gérer les requêtes HTTP du projet.
+  - 4f - ```node index.js```
 
 5- Testez votre application en ajoutant, mettant à jour et supprimant des tâches, en vous assurant que les modifications sont reflétées à la fois dans l'application et dans l'API.
 
