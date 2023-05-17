@@ -77,7 +77,7 @@ server.listen(3000, () => {
 **Étape 4: Affichage des données dans l'application Angular​**
 
 1 - Affichez les donnée du composant dans l'application web Angular
-  - 1a - Ouvrez le fichier ***src/app/app.component.html*** et renseignez vous sur internet
+  - 1a - Ouvrez le fichier ***src/app/app.component.html***
 
 2- Verifiez que ans la section des déclarations du module il y est bien ***UserListComponent***
 
