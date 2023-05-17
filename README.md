@@ -96,12 +96,12 @@ server.listen(3000, () => {
 
 2- Dans le composant principal de l'application ***(app.component.ts)***, injectez le service TaskService et utilisez-le pour afficher la liste des tâches et implémentez les fonctionnalités d'ajout, de mise à jour et de suppression de tâches.
 
-3- Dans le fichier HTML du composant principal ***(app.component.html)***, affichez les tâches récupérées depuis l'API et ajoutez des fonctionnalités pour créer, mettre à jour et supprimer des tâches.
+3- Dans le fichier HTML du composant principal ***(app.component.html)***, affichez les tâches récupérées depuis le service et ajoutez des fonctionnalités pour créer, mettre à jour et supprimer des tâches.
 
-4- Déployez une API RESTful vous pouvez utiliser une fausse API comme JSONPlaceholder ou créer votre propre API en utilisant des outils tels que Express pour gérer les requêtes HTTP de votre application :
+4- Déployez une API RESTful, vous pouvez utiliser une fausse API comme JSONPlaceholder ou créer votre propre API en utilisant des outils tels que Express pour gérer les requêtes HTTP de votre application :
 
-  - 4a - Créez un nouveau répertoire pour votre API et allez-y dans votre terminal.
-  - 4b - Installez les dépendances nécessaires pour votre API, (prenez Express) : ```npm install express body-parser```
+  - 4a - Créez un nouveau répertoire pour votre API et allez-y depuis votre terminal.
+  - 4b - Installez les dépendances nécessaires pour votre API: ```npm install express body-parser```
   - 4c - Créez un fichier index.js dans votre répertoire pour l'API.
   - 4d - Dans le fichier index.js, importez les modules nécessaires et configurez Express pour écouter sur un port spécifique.
   - 4e - Ajoutez les routes nécessaires pour gérer les requêtes HTTP du projet.
