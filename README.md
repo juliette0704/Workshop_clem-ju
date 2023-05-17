@@ -76,14 +76,16 @@ server.listen(3000, () => {
 
 **Étape 4: Affichage des données dans l'application Angular​**
 
-1 - Affichez les donnée du composant dans l'application web Angular
+1 - Affichez les données du composant dans l'application web Angular
   - 1a - Ouvrez le fichier ***src/app/app.component.html***
 
-2- Verifiez que ans la section des déclarations du module il y est bien ***UserListComponent***
+2- Verifiez que dans la section des déclarations du module il y est bien ***UserListComponent***
 
 3- Lancez votre projet
 
 ***Etape 5: Créer une application de gestion des tâches (to-do list) en utilisant Angular et une API RESTful.***
+
+0- Creer le service ***task.service.ts***
 
 1- Dans le service ***task.service.ts***, importez HttpClient et implémentez les méthodes nécessaires pour effectuer les requêtes HTTP suivantes :
 
